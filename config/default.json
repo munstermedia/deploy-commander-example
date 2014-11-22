@@ -10,12 +10,6 @@
 			}
 		}
 	},
-	"environments":[
-		"development",
-		"production",
-		"staging",
-		"testing"
-	],
 	"params":{
 		"domain":"demo.com",
 		"user":"vagrant",
