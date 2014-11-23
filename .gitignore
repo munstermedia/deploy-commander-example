@@ -4,3 +4,7 @@ config/*/*.json
 .project
 .pydevproject
 .config
+.backup
+.vagrant
+command
+fabfile
