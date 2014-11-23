@@ -17,6 +17,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 	
 	  web1.vm.network :private_network, ip: "192.168.56.111"
 	  web1.vm.synced_folder "./../", "/project/", :owner => "www-data", :group => "www-data"
+  
+  	config.vm.provision :puppet do |puppet|
+    	puppet.manifests_path = 'puppet/manifests'
+    	puppet.manifest_file = 'site.pp'
+    	puppet.module_path = 'puppet/modules'
+  	end
+  
   end
   
   
@@ -25,6 +32,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     #vb.gui = true
   
     #vb.customize ["modifyvm", :id, "--cpus", "1"]
-    vb.customize ["modifyvm", :id, "--memory", "1024"]
+	vb.customize ["modifyvm", :id, "--memory", "1024"]
   end
 end
