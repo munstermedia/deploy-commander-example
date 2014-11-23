@@ -15,4 +15,4 @@ File {
   mode  => '0644',
 }
 
-include baseconfig, apache, mysql, php, apache_vhosts
+include baseconfig, apache, git, mysql, php, apache_vhosts
