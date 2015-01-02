@@ -5,18 +5,18 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.vm.define "web1" do |web1|
+  config.vm.define "webdeploy" do |webdeploy|
 	  # Use ubuntu trusty box
-	  web1.vm.box = "ubuntu/trusty64"
+	  webdeploy.vm.box = "ubuntu/trusty64"
 	  
 	  # Define fetch box
-	  web1.vm.box_url = "http://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box"
+	  webdeploy.vm.box_url = "http://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box"
 	
 	  # Foreward port 80 to devserver port
-	  # web1.vm.network :forwarded_port, guest: 80, host: 8000
+	  # webdeploy.vm.network :forwarded_port, guest: 80, host: 8000
 	
-	  web1.vm.network :private_network, ip: "192.168.56.111"
-	  web1.vm.synced_folder "./../", "/project/", :owner => "www-data", :group => "www-data"
+	  webdeploy.vm.network :private_network, ip: "192.168.56.111"
+	  webdeploy.vm.synced_folder "./../", "/project/", :owner => "www-data", :group => "www-data"
   
   	config.vm.provision :puppet do |puppet|
     	puppet.manifests_path = 'puppet/manifests'
