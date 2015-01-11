@@ -1,0 +1,9 @@
+{
+	"master_password":"123456",
+	"env":{
+		"debug":"False",
+		"warning_only":"True",
+		"running":"False",
+		"stdout":"False"
+	}
+}

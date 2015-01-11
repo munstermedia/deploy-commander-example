@@ -1,7 +1,8 @@
 ## Setup example
 
 
-We have examples available for download and it contains a basic setup with the following:
+
+This example repo contains a basic setup with the following:
 
 - Vagrant file (for your local dev machine)
 - Setup server with puppet
@@ -10,15 +11,27 @@ We have examples available for download and it contains a basic setup with the f
 - Main config.dist for main configuration
 
 
+
+## Requirements
+
+In this example we'll use [virtualbox](https://www.virtualbox.org/) and [vagrant](https://www.vagrantup.com/).
+
+We'll assume you have worked with then...
+
+We only tested this system on unix like machines, like Ubuntu and MacOS.
+Currently we don't support other flavors... sorry... (allthough it must work on centos too...)
+So for now, this quick demo can't be run if you are using a windows machine.
+
+
 ```
 // Clone an example
-git clone https://github.com/munstermedia/deploy-commander-php-example.git
+git clone https://github.com/munstermedia/deploy-commander-example.git
 
 // Go into repo
-cd deploy-commander-php-example
+cd deploy-commander-example
 
 // Setup main config
-mv .config.dist .config
+mv config.json.dist config.json
 
 // Load development server, a ubuntu trusty box with ip 192.168.56.111
 vagrant up
