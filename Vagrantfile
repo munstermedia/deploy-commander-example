@@ -15,7 +15,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 	  # Foreward port 80 to devserver port
 	  # webdeploy.vm.network :forwarded_port, guest: 80, host: 8000
 	
-	  webdeploy.vm.network :private_network, ip: "192.168.56.111"
+	  webdeploy.vm.network :private_network, ip: "192.168.56.135"
 	  webdeploy.vm.synced_folder "./../", "/project/", :owner => "www-data", :group => "www-data"
   
   	config.vm.provision :puppet do |puppet|

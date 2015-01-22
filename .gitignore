@@ -3,7 +3,7 @@ config/*.json
 config/*/*.json
 .project
 .pydevproject
-.config
+config.json
 .backup
 .vagrant
 command
